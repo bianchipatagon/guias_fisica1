@@ -8,3 +8,5 @@ no sé si queremos que los .tex queden públicos, por ahí eso se puede cambiar
 
 besos y abrazos,
 el escribiente
+
+qué cheto overleaf, se lleva bárbaro con github!
