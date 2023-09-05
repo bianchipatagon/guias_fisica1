@@ -1,0 +1,95 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{geometry}
+\geometry{margin=2cm}
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage[utf8]{inputenc}
+%\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[spanish]{babel} 
+%\usepackage{fontspec}
+\usepackage{lineno,hyperref}
+\usepackage{upgreek}
+\usepackage{gensymb}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{textgreek}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{dirtytalk}
+
+\allowdisplaybreaks
+%\textwidth18cm
+%\textheight22cm
+%\topmargin0cm
+%\oddsidemargin2cm
+%\hypersetup{hidelinks}
+
+\usepackage{multirow}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    }
+\graphicspath{{img}}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\renewcommand{\b}{\textbf}
+
+\newsavebox{\mygraphic}
+\sbox{\mygraphic}{\includegraphics[height=1cm]{logoUNRN.jpg}}
+
+
+\pagestyle{fancy}
+
+\fancyhead{}
+
+\headheight 16pt
+
+\fancyhead[LO]{\setlength{\unitlength}{1in}
+	\begin{picture}(0,0)
+		\put(0,0){\usebox{\mygraphic}}
+	\end{picture}
+	\hspace{1cm}
+}
+
+\fancyhead[CO] {\hspace{1.5cm} \large Física I: Ingenierías Ambiental, Electrónica y Telecomunicaciones}
+
+%esto me pareció piola para enumerar los ejercicios
+%lo saqué de acá: https://tex.stackexchange.com/questions/302948/numbered-exercises-as-sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newcounter{eje}
+\setcounter{eje}{0}
+\newcounter{subeje}
+\setcounter{subeje}{-1}
+\renewcommand\thesubeje{\arabic{eje}\alph{subeje}}%
+\newcommand \eje{%
+  \vspace{.2cm}
+  \par\noindent
+  \ifnum\value{subeje}>-1
+    \refstepcounter{subeje}%
+    \llap{\thesubeje)\quad}%
+  \else
+    \refstepcounter{eje}%
+    \llap{\theeje)\quad}%
+  \fi
+}
+\begin{document}
+\pagestyle{fancy}
+
+\begin{center}
+
+	{\Large \textbf{PROPUESTAS 2023}}
+ 
+\vspace{.2cm}
+
+{REUNIÓN A FIN DE AÑO}
+\end{center}
+
+\eje \textbf{Entregas de laboratorios.} NO OBLIGATORIAS, para no sumar carga extra a los estudiantes. No obstante si el estudiante hace las entregas correspondientes sumará puntos para su nota final de la materia. Sea que esta la consiga promocionando la cursada, o bien rindiendo el final como regular.
+
+\eje \textbf{Exámenes.} Los exámenes seguirán siendo 4 instancias, 3 parciales OBLIGATORIOS y 1 instancia integradora de recuperatorio geneal (sólo para aquellos que no hayan aprobado como mínimo uno de los temas del programa). En el primer parcial se evaluarán los temas 1, 2 y 3. En la segunda, los temas 4, 5, 6 y 7. En la última instancia se evaluarán los temas 8, 9 y 10 (si se llega a dar termodinámica, sino solo 8 y 9). 
+
+
+\end{document}
