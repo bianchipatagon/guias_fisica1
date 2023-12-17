@@ -104,7 +104,7 @@
 \item [c)] Muestre en un gráfico los vectores velocidad involucrados en la resolución del problema.
 \end{itemize}
 
-\eje {\bf [nuevo]} El bloque con forma de cuña de la figura adjunta se acelera de tal manera que el carrito sobre este, no desliza por la pendiente, es decir que no lo hace ni para arriba, ni para abajo. Despreciando el rozamiento entre el carrito y el bloque, encuentre la aceleración de la cuña para que esto ocurra
+\eje {\bf [nuevo]} El bloque con forma de cuña de la figura adjunta se acelera de tal manera que el carrito no desliza por la pendiente. Despreciando el rozamiento entre el carrito y el bloque, encuentre la aceleración en función del ángulo $\theta$ de la cuña para que esto ocurra.
 
 \begin{figure}[H]
 \begin{center}
@@ -112,13 +112,13 @@
 \end{center}
 \end{figure}
 
-\eje {\bf [eje 16 práctica 5 hecho por Raúl]} Un cilindro sube por el plano inclinado por la acción de un par de fuerzas (es decir, fuerzas iguales y opuestas) que generan un torque M, como indica la figura. 
+\eje {\bf [eje 16 práctica 5 hecho por Raúl]} Un cilindro sube por un plano inclinado debido a la acción de un torque externo {\it M}, como indica la figura. 
 \begin{itemize}
-\item [a)] Realizar el diagrama de cuerpo libre del cilindro COMPLETO. Todas las fuerzas y todos los torques (respecto del CM).
+\item [a)] Realizar el diagrama de cuerpo libre del cilindro.
 
-\item [b)] Hallar el valor máximo que puede tener el par de fuerzas aplicado para que el cilindro suba por el plano rodando sin deslizar. 
+\item [b)] Hallar el valor máximo que puede tener el torque aplicado para que el cilindro suba por el plano rodando sin deslizar. 
 
-\item [c)] Hallar la aceleración del centro de masa del cilindro para que éste suba por el plano rodando sin deslizar 
+\item [c)] Hallar la aceleración del centro de masa del cilindro para el valor del torque hallado en el punto anterior.
 \end{itemize}
 
 \begin{figure}[H]
@@ -127,15 +127,18 @@
 \end{center}
 \end{figure}
 
-\eje {\bf [nuevo]} Un carrito de masa M = $0.25$ kg, inicialmente en reposo, se deja caer por un plano inclinado para luego tomar una rampa que lo deja en caída libre al ras del suelo, forzando una dirección de 30$\degree$ en la velocidad inicial. Luego del vuelo libre el carrito vuelve a tocar el suelo a una distancia $d = 1$m., Si el carrito se soltó desde una altura $h = 1.5$m
+\eje {\bf [nuevo]} Un carrito de masa M = $0.25$ kg, inicialmente en reposo, se deja caer por un plano inclinado para luego tomar una rampa que lo deja en caída libre al ras del suelo, con una velocidad inicial con dirección 30$\degree$ respecto de la horizontal. Luego del vuelo libre el carrito vuelve a tocar el suelo a una distancia $d = 1$m. 
+
+Si el carrito se soltó desde una altura $h = 1.5$m, determine:
 \begin{itemize}
-  \item[a)] Determine el trabajo de las fuerzas no conservativas (sin omitir el signo ya sea positivo o negativo)
+  \item[a)] la velocidad inicial al abandonar la rampa.
+  
+  \item[b)] Suponiendo que las fuerzas no conservativas se deben a roce dinámico a lo largo de 2 metros del plano inclinado en 37$\degree$, ¿cuál será el coeficiente $\mu_d$? Realice un diagrama de cuerpo del carrito en esta situación.
+% rta: Wnc = -1* Mgcos(37) * \mu * 2 m = -0.35 Mg  --> \mu =0.35/2/0.8 = .22
+  \item[b)] el trabajo de las fuerzas no conservativas (incluya el signo)
   %rta Wnc = Ef - Ei = K - Upot = 1/2 M g d/sen(60) - Mgh = -0.35m Mg = -0.846 J
   
-  \item[b)] Suponiendo que las fuerzas no conservativas actúan únicamente a lo largo de 2 metros del plano inclinado, ¿cuál será el coeficiente de roce dinámico $\mu_d$? Realice un diagrama de cuerpo libre si fuera necesario.
-% rta: Wnc = -1* Mgcos(37) * \mu * 2 m = -0.35 Mg  --> \mu =0.35/2/0.8 = .22
-  
-  \item[c)] ¿Qué fracción de la energía potencial inicial se disipa por el trabajo de las fuerzas de roce? (Considere el cero a nivel del suelo)
+  \item[c)] ¿Qué fracción de la energía potencial inicial se disipa por el trabajo de las fuerzas de roce? (considere la energía potencial referida a nivel del suelo)
   
 %  rta:   Upot * q = |Wnc|
 %         Mg 1.5m q = 0.35m Mg --> q = 0.23
@@ -154,7 +157,6 @@
 \eje
 Un caudal de 4 litros por minuto de agua fluye a través de una tubería de diámetro  D$_1$ = 1$^{\prime\prime}$. En una parte el conducto se reduce a un diámetro  D$_2$ = 3/4$^{\prime\prime}$. Dos mangueras de nivel se conectan a la tubería en ambas secciones, registrando alturas h$_1$ y h$_2$ respectivamente. Si h$_1$ = 5m, ¿cuánto será la altura medida en h$_2$?
 
-Nota: 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[clip,width = \columnwidth]{img/fluidos_final_dic2023.png}
@@ -170,6 +172,12 @@ Nota:
 \item [b)] Luego, ¿qué pasaría si el período fuera aún menor?
 \end{itemize}
 
-\eje {\bf [eje 8 práctica 10 hecho por Raúl]} En una transformación a presión constante (presión atmosférica) el volumen de un gas varía en 0.25 litros. Se le suministran 21.8 cal. En una transformación a volumen constante se le suministran 15.6 cal. Calcular en ambos casos la variación de la energía interna del gas.
+\eje {\bf [eje 8 práctica 10 hecho por Raúl]} Considere dos casos:
+\begin{itemize}
+\item[a)]Un determinado volumen de gas, al suministrarle 21.8 cal en forma de calor a presión constante, se expande en 0.25 litros.
+\item[b)] A un gas se le suministran 15.6 cal en forma de calor, manteniendo el volumn constante.
+\end{itemize}
 
+
+ Calcular en ambos casos la variación de la energía interna del gas, considerando que se comportan como gases ideales.
 \end{document}
