@@ -1,0 +1,168 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{geometry}
+\geometry{margin=2cm}
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage[utf8]{inputenc}
+%\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[spanish]{babel} 
+%\usepackage{fontspec}
+\usepackage{lineno,hyperref}
+\usepackage{upgreek}
+\usepackage{gensymb}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{textgreek}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{dirtytalk}
+
+\allowdisplaybreaks
+%\textwidth18cm
+%\textheight22cm
+%\topmargin0cm
+%\oddsidemargin2cm
+%\hypersetup{hidelinks}
+
+\usepackage{multirow}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    }
+\graphicspath{{img}}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\renewcommand{\b}{\bf}
+
+\newsavebox{\mygraphic}
+\sbox{\mygraphic}{\includegraphics[height=1cm]{logoUNRN.jpg}}
+
+
+\pagestyle{fancy}
+
+\fancyhead{}
+
+\headheight 16pt
+
+\fancyhead[LO]{\setlength{\unitlength}{1in}
+	\begin{picture}(0,0)
+		\put(0,0){\usebox{\mygraphic}}
+	\end{picture}
+	\hspace{1cm}
+}
+
+\fancyhead[CO] {\hspace{1.5cm} \large Física I: Ingenierías Ambiental, Electrónica y Telecomunicaciones}
+
+%esto me pareció piola para enumerar los ejercicios
+%lo saqué de acá: https://tex.stackexchange.com/questions/302948/numbered-exercises-as-sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newcounter{eje}
+\setcounter{eje}{0}
+\newcounter{subeje}
+\setcounter{subeje}{-1}
+\renewcommand\thesubeje{\arabic{eje}\alph{subeje}}%
+\newcommand \eje{%
+  \vspace{.2cm}
+  \par\noindent
+  \ifnum\value{subeje}>-1
+    \refstepcounter{subeje}%
+    \llap{\thesubeje)\quad}%
+  \else
+    \refstepcounter{eje}%
+    \llap{\theeje)\quad}%
+  \fi
+}
+\begin{document}
+\pagestyle{fancy}
+
+\begin{center}
+
+	{\Large \bf{Final Física I (Diciembre 2023 - REGULARES)}}
+ 
+\vspace{.2cm}
+
+{Miércoles 20/12}
+\end{center}
+
+%\hspace{5cm}Tome para el valor de g = 9.8 m/s$^2$.
+\begin{itemize}
+	\item {\bf Resuelva cada ejercicio en una hoja separada. Recuerde, se corrigen los mejores 4.}
+	\item {\bf Si las cantidades que se piden son dimensionales, acompañe el valor con la unidad correspondiente.}
+	\item {\bf De las respuestas con precisión numérica consecuente con los datos.}
+	\item {\bf Para la gravedad utilice g = 9.8 m/s$^2$.}
+\end{itemize}
+
+%{\bf [muy parecido a ejercicios nuevos práctica 1]} 
+\eje Un piloto desea que su aeronave vuele en dirección norte respecto del suelo, pero hay viento de 60.0 km/hr que sopla de oeste a este (izquierda a derecha).
+\begin{itemize}
+\item [a)] Si la velocidad del avión con respecto al viento es de 320.0 km/hr, ¿hacia dónde debe dirigir la aeronave, el piloto, para lograr ir hacia el norte?
+
+\item [b)] ¿Cuál es la velocidad del avión respecto del suelo?
+
+\item [c)] Muestre en un gráfico los vectores velocidad involucrados en la resolución del problema.
+\end{itemize}
+
+%{\bf [eje 16 práctica 5 hecho por Raúl]} 
+\eje Un cilindro sube por un plano inclinado debido a la acción de un torque externo {\it M}, como indica la figura. 
+\begin{itemize}
+\item [a)] Realizar el diagrama de cuerpo libre del cilindro.
+
+\item [b)] Hallar el valor máximo que puede tener el torque aplicado para que el cilindro suba por el plano rodando sin deslizar. 
+
+\item [c)] Hallar la aceleración del centro de masa del cilindro para el valor del torque hallado en el punto anterior.
+\end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[clip,width = .35\columnwidth]{img/2doparcial2023-0.png}
+\end{center}
+\end{figure}
+
+\eje Un carrito de masa M = $0.25$ kg, inicialmente en reposo, se deja caer por un plano inclinado para luego tomar una rampa que lo deja en caída libre al ras del suelo, con una velocidad inicial con dirección 30$\degree$ respecto de la horizontal. Luego del vuelo libre el carrito vuelve a tocar el suelo a una distancia $d = 1$m. 
+
+Si el carrito se soltó desde una altura $h = 1.5$m, determine:
+\begin{itemize}
+  \item[a)] la velocidad inicial al abandonar la rampa.
+  
+  \item[b)] Suponiendo que las fuerzas no conservativas se deben a roce dinámico a lo largo de 2 metros del plano inclinado en 37$\degree$, ¿cuál será el coeficiente $\mu_d$? Realice un diagrama de cuerpo del carrito en esta situación.
+% rta: Wnc = -1* Mgcos(37) * \mu * 2 m = -0.35 Mg  --> \mu =0.35/2/0.8 = .22
+%  \item[c)] el trabajo de las fuerzas no conservativas (incluya el signo)
+  %rta Wnc = Ef - Ei = K - Upot = 1/2 M g d/sen(60) - Mgh = -0.35m Mg = -0.846 J
+  
+%  \item[d)] ¿Qué fracción de la energía potencial inicial se disipa por el trabajo de las fuerzas de roce? (considere la energía potencial referida a nivel del suelo)
+  
+%  rta:   Upot * q = |Wnc|
+%         Mg 1.5m q = 0.35m Mg --> q = 0.23
+
+  \item[c)] ¿Cuál es el módulo de la velocidad al inicio del vuelo libre?  
+  %acá está la clave del problema
+  %rta v0 = \sqrt{g d /sen(2\theta)} = 3.37 m/s
+\end{itemize}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[clip,width = \columnwidth]{img/ener-roce_final_dic2023.png}
+\end{center}
+\end{figure}
+
+
+\eje Un caudal de 4 litros por minuto de agua fluye a través de una tubería de diámetro  D$_1$ = 1$^{\prime\prime}$. En una parte el conducto se reduce a un diámetro  D$_2$ = 3/4$^{\prime\prime}$. Dos mangueras de nivel se conectan a la tubería en ambas secciones, registrando alturas h$_1$ y h$_2$ respectivamente. Si h$_1$ = 5m, ¿cuánto será la altura medida en h$_2$?
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[clip,width = \columnwidth]{img/fluidos_final_dic2023.png}
+\end{center}
+\end{figure}
+
+
+%{\bf [tomado de 2do parcial 2023]} 
+\eje Una plataforma realiza un MAS según una dirección vertical con amplitud A = 0.5 m. 
+\begin{itemize}
+\item [a)] ¿Cuál debe ser el período mínimo de oscilación para que un cuerpo colocado sobre la plataforma no se separe de ella? 
+
+\item [b)] Luego, ¿qué pasaría si el período fuera aún menor?
+\end{itemize}
+
+\end{document}
